@@ -1,0 +1,9 @@
+.container{
+    display: grid;
+    justify-content: center;
+    background-color: aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-style: solid;
+    text-align: center;
+    box-shadow: 5px 5px;
+}

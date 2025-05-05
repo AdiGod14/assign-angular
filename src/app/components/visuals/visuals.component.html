@@ -1,0 +1,47 @@
+<div class="dialog-overlay" *ngIf="showDialog">
+  <div class="dialog-box">
+    <div class="dialog-heading">
+      <h2>
+        Welcome to my Angular Fundamentals Assignment!
+      </h2>
+    </div>
+    <div class="dialog-list">
+      <ul>
+        <li>
+          It uses components, data binding, and other basic Angular concepts.
+        </li>
+        <li>
+          I have integrated ECharts, with correct configuration.
+        </li>
+        <li>
+          The user can choose the type of chart.
+        </li>
+        <li>
+          Data is fetched from a mock api endpoint generated using Mocky.io.
+        </li>
+        <li>
+          Tooltips have also been implemented to display additional details.
+        </li>
+      </ul>
+    </div>
+    <div class="dialog-button">
+      <button (click)="closeDialog()">Close</button>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="visuals-title">
+  <h2>Egg Prices in India over the last 10 years</h2>
+</div>
+
+<div class="visuals-body">
+  <select class ="custom-dropdown" [(ngModel)]="selectedOption" (change)="updateChart()">
+    <option *ngFor="let opt of Options" [value]="opt">{{ opt | titlecase }} Chart</option>
+  </select>
+
+  <div echarts [options]="chartOption" class="demo-chart"></div>
+</div>
+
+<div *ngIf="chartOption && chartOption.series" echarts [options]="chartOption" style="height: 400px;"></div>
